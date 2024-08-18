@@ -1,4 +1,4 @@
-package main.javacore.androiddev.introduction.challenger.beginner.challengerThree
+package main.javacore.androiddev.introduction.challenger.beginner.challengerTwo
 
 class VehicleData(){
     val labelVehicles = arrayOf("Car","Bus","Plane")
