@@ -6,7 +6,7 @@ import java.util.Scanner
 
 
 fun readerTxt() { // Provavelmente vai ter que colocar outro caminho de arquivo txt
-    val fileTxt = File("src/main/javacore/androiddev/introduction/challenger/beginner/challengerThree/MiscellaneousProduct.txt")
+    val fileTxt = File("src/main.javacore.androiddev.introduction.algorithmExercise.main/javacore/androiddev/introduction/challenger/beginner/challengerThree/MiscellaneousProduct.txt")
 
     try {
         Scanner(fileTxt).use { scanTxt ->
