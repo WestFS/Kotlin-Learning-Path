@@ -8,7 +8,7 @@ abstract class LandConservation : ConservationEfficiency {
     private var protectedAreaInKm2: Double = 0.0
     private var hasMonitoringProgram: Boolean = false
 
-    override fun getLandReserveType(): Double {
+     fun getLandReserveType(): Double {
         return when (typeEnvironment) {
             EnumLandReserveType.FLORESTA -> 80.0
             EnumLandReserveType.CERRADO -> 35.0
@@ -18,7 +18,7 @@ abstract class LandConservation : ConservationEfficiency {
     }
 
     // Calcula a área total com base na área protegida e na porcentagem
-    override fun calculateTotalAreaFromProtectedArea(): Double {
+     fun calculateTotalAreaFromProtectedArea(): Double {
         val protectedArea = protectedAreaInKm2
         val percentage = getLandReserveType()
         return if (percentage > 0) {
