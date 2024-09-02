@@ -17,6 +17,9 @@ abstract class LandConservation : ConservationEfficiency {
         }
     }
 
+    abstract override fun monitoringConservation(): Boolean
+    abstract override fun calculatorEfficiency(): Double
+
     // Calcula a área total com base na área protegida e na porcentagem
      fun calculateTotalAreaFromProtectedArea(): Double {
         val protectedArea = protectedAreaInKm2

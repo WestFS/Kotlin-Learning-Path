@@ -3,12 +3,10 @@ package main.javacore.androiddev.introduction.challenger.intermediary.challenger
 import main.javacore.androiddev.introduction.challenger.intermediary.challenger3.`interface`.ConservationEfficiency
 import kotlin.math.exp
 
-abstract class MarineConservation(private var typeEnvironment: String, private var reserveType: EnumMarineReserveType) : ConservationEfficiency {
+abstract class MarineConservation(private var name:String, private var typeEnvironment: String, private var reserveType: EnumMarineReserveType) : ConservationEfficiency {
     private var protectedAreaInKm2: Double? = 0.0
     private var hasMonitoringProgram: Boolean? = null
     private var yearForProjection: Int? = 0
-
-
 
 
     abstract override fun calculatorEfficiency(): Double
@@ -28,7 +26,7 @@ abstract class MarineConservation(private var typeEnvironment: String, private v
         // Crescimento de recuperação baseado no tipo de RESERVA
         // Fórmula: recuperação = R0 * e^(x * y), onde R0 é 1 (100% inicial)
         val recoveryPercentage = (exp(annualGrowthRate * yearForProjection!!) - 1) * 100
-        println("A recuperação em $years anos é  $annualGrowthRate% (taxa de crescimento) vai resultar em $recoveryPercentage% para cobrir $protectedArea km².")
+        println("A recuperação em $years anos é  $annualGrowthRate% (taxa de crescimento) vai cobrir $recoveryPercentage% de $protectedArea km².")
         return recoveryPercentage * protectedArea
     }
 
@@ -62,7 +60,7 @@ abstract class MarineConservation(private var typeEnvironment: String, private v
     }
 
     override fun toString(): String {
-        return "MarineConservation(typeEnvironment='$typeEnvironment', reserveType=$reserveType, protectedAreaInKm2=$protectedAreaInKm2, hasMonitoringProgram=$hasMonitoringProgram, yearForProjection=$yearForProjection)"
+        return "MarineConservation(name='$name',typeEnvironment='$typeEnvironment', reserveType=$reserveType, protectedAreaInKm2=$protectedAreaInKm2, hasMonitoringProgram=$hasMonitoringProgram, yearForProjection=$yearForProjection)"
     }
 
 

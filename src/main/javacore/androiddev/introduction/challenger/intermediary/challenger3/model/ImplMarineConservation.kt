@@ -1,8 +1,12 @@
 package main.javacore.androiddev.introduction.challenger.intermediary.challenger3.model
 
-class ImplMarineConservation(typeEnvironment: String, reserveType: EnumMarineReserveType) :MarineConservation(typeEnvironment,reserveType) {
+class ImplMarineConservation(
+    name: String,
+    typeEnvironment: String,
+    reserveType: EnumMarineReserveType
+) :MarineConservation(name,typeEnvironment,reserveType) {
 
-    fun monitoringConservation(): Boolean {
+    override fun monitoringConservation(): Boolean {
         // Verifica se tem monitoramento
         val marineReserveType = getReserveType()
         if (marineReserveType == EnumMarineReserveType.PARQUE_NACIONAL_MARINHO ||
@@ -20,7 +24,6 @@ class ImplMarineConservation(typeEnvironment: String, reserveType: EnumMarineRes
         val hasMonitoring: Boolean = getHasMonitoringProgram()
         val reserveType = getMarineReserveType()
 
-        // Coeficiente de ajuste para o programa de monitoramento
         val monitoringAdjustment = if (hasMonitoring) 0.20 else 0.0 // 20% a mais se houver programa de monitoramento
 
         // Cálculo da eficiência

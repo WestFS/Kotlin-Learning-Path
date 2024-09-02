@@ -3,5 +3,5 @@ package main.javacore.androiddev.introduction.challenger.intermediary.challenger
 interface ConservationEfficiency {
     fun calculatorEfficiency(): Double
     fun percentageForPreservation(): Double
-
+    fun monitoringConservation(): Boolean
 }
